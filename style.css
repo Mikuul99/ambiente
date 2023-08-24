@@ -1,0 +1,469 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Quicksand';
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Naslovi';
+    src: url(fontovi/MaginiaRegular-BWP6x.otf);
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url(fontovi/QUICKSAND-REGULAR.TTF);
+}
+
+/* HEADER SEKCIJA */
+
+.header {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .2rem solid white;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    width: 100%;
+    white-space: nowrap;
+    padding: 2rem;
+    transition: background-color .2s ease;
+}
+
+.nav-link:hover {
+    background-color: white;
+    color:#3C2415;
+}
+
+@media screen and (max-width: 1200px) {
+    .nav-link {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .nav {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-link {
+        width: 100%;
+        font-size: 1rem;
+        padding: .8rem;
+    }
+}
+
+/* HOME SEKCIJA */
+
+.home {
+    background: url(slike/c688f1100541225.5f8bf28f91230.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    padding: 3rem;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_h1 {
+    font-family: 'Naslovi';
+    font-size: 3rem;
+    letter-spacing: .5rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .home {
+        min-height: 80vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home {
+        min-height: 70vh;
+    }
+}
+
+/* O NAMA SEKCIJA */
+
+.o-nama {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #F2EFEB;
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    box-shadow: inset 0 0 30rem .2rem rgba(70, 70, 70, 0.418);
+}
+
+.o-nama_img-container {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.o-nama_img-container img {
+    width: 60%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.o-nama_paragraf {
+    width: 100%;
+}
+
+.o-nama_h2 {
+    font-family: 'Naslovi';
+    font-size: 3rem;
+}
+
+.o-nama_p {
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .o-nama {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .o-nama_img-container {
+        height: 100%;
+    }
+
+    .o-nama_img-container img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .o-nama_p {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .o-nama {
+        padding: 3rem 2rem;
+    }
+
+    .o-nama_img-container img {
+        height: 400px;
+    }
+
+    .o-nama_h2 {
+        font-size: 2rem;
+    }
+
+    .o-nama_p {
+        font-size: 1rem;
+    }
+}
+
+/* OSNIVANJE SEKCIJA */
+
+.osnivanje {
+    width: 100%;
+    margin: 0 auto;
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.osnivanje_p {
+    width: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+
+.osnivanje_p span {
+    font-family: 'Naslovi';
+    font-weight: 600;
+    line-height: .2rem;
+}
+
+@keyframes underline {
+    0% {width: 0%;}
+    100% {width: 50%;}
+}
+
+.osnivanje_underline {
+    height: .2rem;
+    background-color: #a89f94;
+    width: 50%;
+    animation: underline 2s infinite alternate;
+}
+
+@media screen and (max-width: 768px) {
+    .osnivanje_p {
+        width: 80%;
+        font-size: 1.3rem;
+    }
+
+    .osnivanje_underline {
+        width: 80%;
+    }
+}
+
+/* GALERIJA SEKCIJA */
+
+.galerija {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #F2EFEB;
+    padding: 5rem;
+}
+
+.galerija_container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.galerija img {
+    object-fit: cover;
+    width: 30rem;
+    height: 600px;
+    cursor: pointer;
+    transition: transform .2s ease;
+    position: relative;
+}
+
+.galerija img:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 1200px) {
+    .galerija {
+        padding: 5rem 2rem;
+    }
+
+    .galerija_container {
+        gap: .5rem;
+    }
+    
+    .galerija img {
+        width: 20rem;
+        height: 300px;
+    }
+}
+
+/* NAŠ TIM SEKCIJA */
+
+.nas-tim {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.nas-tim_paragraf {
+    width: 100%;
+    padding: 2rem;
+}
+
+.nas-tim_h2 {
+    font-family: 'Naslovi';
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 5rem;
+}
+
+.nas-tim_p {
+    font-size: 1.2rem;
+}
+
+.nas-tim_img-container {
+    background: url(slike/a2de5c117954483.607fb60100947.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 60vh;
+}
+
+@media screen and (max-width: 1200px) {
+    .nas-tim_p {
+        font-size: 1rem;
+    }
+
+    .nas-tim_img-container {
+        min-height: 45vh;
+    }
+}
+
+@media screen and (max-width: 786px) {
+    .nas-tim {
+        flex-direction: column;
+    }
+
+    .nas-tim_h2 {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+}
+
+/* KONTAKT SEKCIJA */
+
+.kontakt {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #F2EFEB;
+    padding: 5rem;
+    text-align: center;
+}
+
+.kontakt_p {
+    font-size: 1.5rem;
+}
+
+.kontakt_h2 {
+    font-family: 'Naslovi';
+    font-size: 3rem;
+}
+
+.kontakt form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.kontakt form label {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.kontakt form input {
+    border: solid .2rem #3C2415;
+    border-radius: 2rem;
+    outline: 0;
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.kontakt form textarea {
+    border: solid .2rem #3C2415;
+    outline: 0;
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    text-align: center;
+    resize: none;
+}
+
+.kontakt form input[type='submit'] {
+    width: 30%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: transparent;
+    transition: width .5s ease;
+}
+
+.kontakt form input[type='submit']:hover {
+    width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+    .kontakt_p {
+        font-size: 1.2rem;
+    }
+
+    .kontakt form {
+        width: 80%;
+    }
+
+    .kontakt form input {
+        padding: .5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .kontakt {
+        padding: 2rem 3rem;
+    }
+
+    .kontakt_h2 {
+        font-size: 2.2rem;
+    }
+
+    .kontakt form {
+        width: 100%;
+    }
+
+    .kontakt form label {
+        font-size: 1rem;
+        margin-bottom: .2rem;
+    }
+
+    .kontakt form input {
+        font-size: 1rem;
+    }
+
+    .kontakt form textarea {
+        font-size: 1rem;
+    }
+
+    .kontakt form input[type="submit"] {
+        font-size: 1rem;
+    }
+}
+
+/* FOOTER SEKCIJA */
+
+.footer {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #3C2415;
+    color: white;
+    text-align: center;
+    padding: .6rem;
+}
+
+.footer_p {
+    font-family: 'Naslovi';
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .footer_p {
+        font-size: 1.2rem;
+    }
+}
